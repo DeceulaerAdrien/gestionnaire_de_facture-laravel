@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+}
+
+.head {
+    display: flex;
+    height: 20em;
+    background-color: #972222;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        margin: 0;
+    }
+}

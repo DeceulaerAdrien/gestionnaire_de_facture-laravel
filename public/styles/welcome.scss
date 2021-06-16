@@ -1,0 +1,26 @@
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 37em;
+    .clients {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-right: 15em;
+    }
+    .factures {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    img {
+        border: black solid 0.2em;
+        width: 20em;
+    }
+    a {
+        color: #972222;
+        text-decoration: none;
+        margin: 1em;
+    }
+}
