@@ -9,5 +9,4 @@ Route::get('/', function () {
 
 Route::get('/clients', [ClientsController::class, 'index']);
 
-Route::get('/clients/{id}', function ($id) {
-});
+Route::get('/clients/{id}', [ClientsController::class, 'show']);

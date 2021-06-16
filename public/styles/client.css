@@ -22,4 +22,18 @@
 .content td {
   border-top: 0.2em solid grey;
 }
+
+.content button {
+  border-radius: 0.3em;
+  background-color: #972222;
+}
+
+.content button a {
+  color: white;
+}
+
+.content a {
+  color: #972222;
+  text-decoration: none;
+}
 /*# sourceMappingURL=client.css.map */

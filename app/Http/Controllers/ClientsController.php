@@ -45,9 +45,11 @@ class ClientsController extends Controller
      * @param  \App\Models\clients  $clients
      * @return \Illuminate\Http\Response
      */
-    public function show(clients $clients)
+    public function show(clients $clients, $id)
     {
-        //
+        $clients = clients::findOrFail($id);
+        //dd($data);
+        return view('posts.client_show', ['client' => $clients]);
     }
 
     /**

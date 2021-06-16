@@ -12,6 +12,7 @@
     <h2>Mes clients</h2>
     <p>Dans cette section,vous pouvez voir la liste de tous vos clients</p>
     <table>
+
         <tr>
             <th>#</th>
             <th>Société</th>
