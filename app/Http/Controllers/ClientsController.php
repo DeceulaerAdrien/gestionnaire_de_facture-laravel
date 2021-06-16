@@ -58,9 +58,11 @@ class ClientsController extends Controller
      * @param  \App\Models\clients  $clients
      * @return \Illuminate\Http\Response
      */
-    public function edit(clients $clients)
+    public function edit(clients $clients, $id)
     {
-        //
+        $clients = clients::findOrFail($id);
+
+        return view('posts.client_edit', ['client' => $clients]);
     }
 
     /**

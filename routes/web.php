@@ -10,3 +10,7 @@ Route::get('/', function () {
 Route::get('/clients', [ClientsController::class, 'index']);
 
 Route::get('/clients/{id}', [ClientsController::class, 'show']);
+
+Route::get('/clients/edit/{id}', [ClientsController::class, 'edit']);
+
+Route::patch('/clients/edit/{id}', [ClientsController::class, 'update']);

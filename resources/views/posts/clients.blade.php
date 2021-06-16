@@ -34,7 +34,7 @@
     <td>{{$client->adresse}}</td>
     <td>{{$client->TVA}}</td>
     <td><a href="./">{{$client->facture}}</a></td>
-    <td> <a href="./">Modifier</a> <button> <a href="./">Supprimer</a></button></td>
+    <td> <a href="/clients/edit/{{$client->id}}">Modifier</a> <button> <a href="./">Supprimer</a></button></td>
 </tr>
 
 @endforeach
