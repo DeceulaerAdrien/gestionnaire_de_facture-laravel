@@ -27,13 +27,13 @@
 
 <tr>
     <td>{{$client->id}}</td>
-    <td>{{$client->société}}</td>
+    <td><a href="/clients/{{$client->id}}">{{$client->société}}</a></td>
     <td>{{$client->téléphone}}</td>
     <td>{{$client->email}}</td>
     <td>{{$client->adresse}}</td>
     <td>{{$client->TVA}}</td>
-    <td>{{$client->facture}}</td>
-    <td> <a href="./">Nice</a> <button> <a href="./">Pas Nice</a></button></td>
+    <td><a href="./">{{$client->facture}}</a></td>
+    <td> <a href="./">Modifier</a> <button> <a href="./">Supprimer</a></button></td>
 </tr>
 
 @endforeach

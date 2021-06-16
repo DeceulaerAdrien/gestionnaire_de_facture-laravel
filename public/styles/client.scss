@@ -1,0 +1,16 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    h2 {
+        margin: 0;
+        margin-top: 1em;
+    }
+    p {
+        margin: 0;
+        margin-bottom: 1em;
+    }
+    td {
+        border-top: 0.2em solid grey;
+    }
+}

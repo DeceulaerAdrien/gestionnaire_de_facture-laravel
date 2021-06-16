@@ -8,3 +8,6 @@ Route::get('/', function () {
 });
 
 Route::get('/clients', [ClientsController::class, 'index']);
+
+Route::get('/clients/{id}', function ($id) {
+});
