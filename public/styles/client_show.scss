@@ -1,0 +1,26 @@
+.content {
+    display: flex;
+    height: 36em;
+    .data {
+        display: flex;
+        flex-direction: column;
+        width: 50vw;
+        justify-content: center;
+        align-items: center;
+        .text {
+            display: flex;
+            flex-direction: column;
+            p {
+                margin-left: 2em;
+            }
+            a {
+                color: #972222;
+                text-decoration: none;
+            }
+        }
+    }
+    .deco {
+        width: 50vw;
+        background-color: #972222;
+    }
+}
