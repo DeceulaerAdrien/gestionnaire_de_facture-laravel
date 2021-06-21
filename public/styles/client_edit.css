@@ -1,1 +1,25 @@
-/* No CSS *//*# sourceMappingURL=client_edit.css.map */
+.content {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+}
+
+.content h2 {
+  background-color: #b1a7a7;
+}
+
+.content form {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+}
+
+.content form input {
+  margin: 1em;
+}
+
+.content form .send {
+  color: white;
+  background-color: #972222;
+}
+/*# sourceMappingURL=client_edit.css.map */

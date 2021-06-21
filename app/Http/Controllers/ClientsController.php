@@ -98,8 +98,10 @@ class ClientsController extends Controller
      * @param  \App\Models\clients  $clients
      * @return \Illuminate\Http\Response
      */
-    public function destroy(clients $clients)
+    public function destroy(clients $clients, $id)
     {
-        //
+        $client = clients::findorFail($id);
+        $client->destroy();
+        return redirect('/clients');
     }
 }

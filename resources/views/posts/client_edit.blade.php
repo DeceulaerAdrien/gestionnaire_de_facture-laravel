@@ -3,11 +3,12 @@
 @section('title',$client->société)
 
 @section('css')
-<link rel="stylesheet" href="">
+<link rel="stylesheet" href="{{asset('styles/client_edit.css')}}">
 @endsection
 
 @section('content')
 <div class="content">
+    <h2>Modifier le client : {{$client->société}}</h2>
     <form action="/clients/edit/{{$client->id}}" method="post">
         {{ csrf_field()}}
         {{ method_field('PATCH') }}
@@ -21,7 +22,7 @@
         <input type="text" name="adresse" value="{{$client->adresse}}">
         <label for="TVA">TVA</label>
         <input type="text" name="TVA" value="{{$client->TVA}}">
-        <input type="submit" value="Modifier la fiche client">
+        <input type="submit" value="Modifier la fiche client" class="send">
     </form>
 </div>
 
