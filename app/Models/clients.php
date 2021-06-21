@@ -10,4 +10,8 @@ class clients extends Model
     use HasFactory;
     protected $table = 'clients';
     protected $fillable = ['clients'];
+    public function factures()
+    {
+        return $this->hasMany(facture::class);
+    }
 }

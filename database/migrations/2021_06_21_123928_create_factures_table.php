@@ -21,6 +21,8 @@ class CreateFacturesTable extends Migration
             $table->integer('TVA');
             $table->string('client');
             $table->timestamps();
+
+            $table->foreignId('User_id');
         });
     }
 

@@ -49,7 +49,6 @@ class ClientsController extends Controller
     public function show(clients $clients, $id)
     {
         $clients = clients::findOrFail($id);
-        //dd($data);
         return view('posts.client_show', ['client' => $clients]);
     }
 
