@@ -24,20 +24,22 @@
             <th>Opérations</th>
         </tr>
 
-@foreach ($clients as $client)
+        @foreach ($clients as $client)
 
-<tr>
-    <td>{{$client->id}}</td>
-    <td><a href="/clients/{{$client->id}}">{{$client->société}}</a></td>
-    <td>{{$client->téléphone}}</td>
-    <td>{{$client->email}}</td>
-    <td>{{$client->adresse}}</td>
-    <td>{{$client->TVA}}</td>
-    <td><a href="./">{{$client->facture}}</a></td>
-    <td> <a href="/clients/edit/{{$client->id}}">Modifier</a> <button> <a href="./">Supprimer</a></button></td>
-</tr>
+        <tr>
+            <td>{{$client->id}}</td>
+            <td><a href="/clients/{{$client->id}}">{{$client->société}}</a></td>
+            <td>{{$client->téléphone}}</td>
+            <td>{{$client->email}}</td>
+            <td>{{$client->adresse}}</td>
+            <td>{{$client->TVA}}</td>
+            <td><a href="./">{{$client->facture}}</a></td>
+            <td><a href="/clients/edit/{{$client->id}}">Modifier</a>
+                <button><a href="/clients/delete/{{$client->id}}">Supprimer</a></button>
+            </td>
+        </tr>
 
-@endforeach
+        @endforeach
 
     </table>
 </div>

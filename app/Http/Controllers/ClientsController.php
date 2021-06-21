@@ -14,7 +14,8 @@ class ClientsController extends Controller
      */
     public function index()
     {
-        $clients = clients::get();
+        $clients = clients::orderBy('id', 'asc')
+            ->get();
         return view('posts.clients', compact('clients'));
     }
 
@@ -90,6 +91,8 @@ class ClientsController extends Controller
         $client->adresse = $request->adresse;
         $client->TVA = $request->TVA;
         $client->save();
+
+        return redirect('/clients');
     }
 
     /**
@@ -98,10 +101,17 @@ class ClientsController extends Controller
      * @param  \App\Models\clients  $clients
      * @return \Illuminate\Http\Response
      */
+    public function showDestroy(clients $clients, $id)
+    {
+        $clients = clients::findorFail($id);
+        return view('posts.client_delete', ['client' => $clients]);
+    }
+
     public function destroy(clients $clients, $id)
     {
-        $client = clients::findorFail($id);
-        $client->destroy();
+        $clients = clients::findorFail($id);
+        $clients->destroy($id);
+
         return redirect('/clients');
     }
 }
