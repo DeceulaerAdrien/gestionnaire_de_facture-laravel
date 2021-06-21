@@ -72,9 +72,24 @@ class ClientsController extends Controller
      * @param  \App\Models\clients  $clients
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, clients $clients)
+    public function update(Request $request, clients $clients, $id)
     {
-        //
+        $this->validate(
+            request(),
+            ['société' => 'required'],
+            ['téléphone' => 'required'],
+            ['email' => 'required'],
+            ['adresse' => 'required'],
+            ['TVA' => 'required']
+        );
+
+        $client = clients::findOrFail($id);
+        $client->société = $request->société;
+        $client->téléphone = $request->téléphone;
+        $client->email = $request->email;
+        $client->adresse = $request->adresse;
+        $client->TVA = $request->TVA;
+        $client->save();
     }
 
     /**
