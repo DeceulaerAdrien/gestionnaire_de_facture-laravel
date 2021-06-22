@@ -20,7 +20,7 @@ class CreateInvoicesTable extends Migration
             $table->integer('price');
             $table->integer('VAT');
             $table->integer('total');
-            $table->foreignId('clients');
+            $table->foreignId('client_id');
             //$table->unsignedBigInteger('client_id');
             $table->timestamps();
 
