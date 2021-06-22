@@ -26,7 +26,7 @@ class ClientsFactory extends Factory
             'Phone' => $this->faker->phoneNumber(),
             'email' => $this->faker->email(),
             'address' => $this->faker->address(),
-            'VAT' => $this->faker->vat(),
+            'VAT' => $this->faker->ein(),
         ];
     }
 }
