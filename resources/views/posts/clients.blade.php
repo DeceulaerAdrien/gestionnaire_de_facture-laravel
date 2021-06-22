@@ -20,7 +20,7 @@
             <th>Email</th>
             <th>Adresse</th>
             <th>TVA</th>
-            <th>Factures</th>
+            {{-- <th>Factures</th> --}}
             <th>Opérations</th>
         </tr>
 
@@ -28,12 +28,12 @@
 
         <tr>
             <td>{{$client->id}}</td>
-            <td><a href="/clients/{{$client->id}}">{{$client->société}}</a></td>
-            <td>{{$client->téléphone}}</td>
+            <td><a href="/clients/{{$client->id}}">{{$client->society}}</a></td>
+            <td>{{$client->phone}}</td>
             <td>{{$client->email}}</td>
-            <td>{{$client->adresse}}</td>
-            <td>{{$client->TVA}}</td>
-            <td><a href="./">{{$client->facture}}</a></td>
+            <td>{{$client->address}}</td>
+            <td>{{$client->VAT}}</td>
+            {{-- <td><a href="./">{{$client->facture}}</a></td> --}}
             <td><a href="/clients/edit/{{$client->id}}">Modifier</a>
                 <button><a href="/clients/delete/{{$client->id}}">Supprimer</a></button>
             </td>

@@ -8,7 +8,7 @@
 
 @section('content')
 <div class="content">
-    <h2>Êtes vous sûre de vouloir supprimer {{$client->société}} ?</h2>
+    <h2>Êtes vous sûre de vouloir supprimer {{$client->society}} ?</h2>
     <div class="buttons">
         <button><a href="/clients">annuler</a></button>
         <form action="{{ route('clients.destroy', [$client->id]) }}" method="POST">
