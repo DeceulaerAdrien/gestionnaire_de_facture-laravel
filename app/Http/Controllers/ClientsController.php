@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\clients;
+use App\Models\Clients;
 use Illuminate\Http\Request;
 
 class ClientsController extends Controller
@@ -14,7 +14,7 @@ class ClientsController extends Controller
      */
     public function index()
     {
-        $clients = clients::orderBy('id', 'asc')
+        $clients = Clients::orderBy('id', 'asc')
             ->get();
         return view('posts.clients', compact('clients'));
     }
@@ -43,24 +43,24 @@ class ClientsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\clients  $clients
+     * @param  \App\Models\Clients  $clients
      * @return \Illuminate\Http\Response
      */
-    public function show(clients $clients, $id)
+    public function show(Clients $clients, $id)
     {
-        $clients = clients::findOrFail($id);
+        $clients = Clients::findOrFail($id);
         return view('posts.client_show', ['client' => $clients]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\clients  $clients
+     * @param  \App\Models\Clients  $clients
      * @return \Illuminate\Http\Response
      */
-    public function edit(clients $clients, $id)
+    public function edit(Clients $clients, $id)
     {
-        $clients = clients::findOrFail($id);
+        $clients = Clients::findOrFail($id);
 
         return view('posts.client_edit', ['client' => $clients]);
     }
@@ -69,10 +69,10 @@ class ClientsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\clients  $clients
+     * @param  \App\Models\Clients  $clients
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, clients $clients, $id)
+    public function update(Request $request, Clients $clients, $id)
     {
         $this->validate(
             request(),
@@ -83,7 +83,7 @@ class ClientsController extends Controller
             ['TVA' => 'required']
         );
 
-        $client = clients::findOrFail($id);
+        $client = Clients::findOrFail($id);
         $client->société = $request->société;
         $client->téléphone = $request->téléphone;
         $client->email = $request->email;
@@ -97,18 +97,18 @@ class ClientsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\clients  $clients
+     * @param  \App\Models\Clients  $clients
      * @return \Illuminate\Http\Response
      */
-    public function showDestroy(clients $clients, $id)
+    public function showDestroy(Clients $clients, $id)
     {
-        $clients = clients::findorFail($id);
+        $clients = Clients::findorFail($id);
         return view('posts.client_delete', ['client' => $clients]);
     }
 
-    public function destroy(clients $clients, $id)
+    public function destroy(Clients $clients, $id)
     {
-        $clients = clients::findorFail($id);
+        $clients = Clients::findorFail($id);
         $clients->destroy($id);
 
         return redirect('/clients');

@@ -15,12 +15,11 @@ class CreateClientsTable extends Migration
     {
         Schema::create('clients', function (Blueprint $table) {
             $table->id();
-            $table->string('société');
-            $table->string('téléphone');
+            $table->string('society');
+            $table->string('phone');
             $table->string('email');
-            $table->text('adresse');
-            $table->string('TVA');
-            $table->string('facture');
+            $table->text('address');
+            $table->string('VAT');
             $table->timestamps();
         });
     }
@@ -32,6 +31,6 @@ class CreateClientsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('clients');
+        Schema::dropIfExists('Clients');
     }
 }

@@ -2,16 +2,14 @@
 
 namespace App\Models;
 
+
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class clients extends Model
+class Clients extends Model
 {
     use HasFactory;
     protected $table = 'clients';
     protected $fillable = ['clients'];
-    public function factures()
-    {
-        return $this->hasMany(facture::class);
-    }
 }
